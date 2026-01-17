@@ -1,0 +1,22 @@
+<script src="js/Chatbot.js"></script>
+    <script>
+      window.N8NbrandableChatbox.init({
+        webhookUrl: "https://workflow.srvdevhome.my.id/webhook/1a05e652-773a-40f2-ae60-92a875111c68",
+        botName: "Nattya Bot",
+        brandColor: "#65B530",
+        accentColor: "#65B530",
+        botAvatarUrl: "",
+        userAvatarUrl: "",
+        welcomeMessage: "Hallo Saya Nattya Bot, Ada yang bisa saya bantu?, dengan siapa saya berbicara?",
+        headers: { },
+        darkMode: false,
+        openByDefault: false,
+        allowHTMLInResponses: true,
+        launcherVariant: "icon-text",
+        launcherText: "Chat with us",
+        sessionTtlMinutes: 60,
+        transformRequest: (text, ctx) => ({ message: text, sessionId: ctx.sessionId, metadata: ctx.metadata }),
+        transformResponse: (data) => data?.reply || data?.message || data?.text || data?.output || "No response",
+      });
+    </script>
+    <!-- Chatbot stop -->

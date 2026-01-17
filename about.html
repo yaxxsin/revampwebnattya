@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - Modern IT Solutions</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Chatbot Script (defer untuk non-blocking load) -->
+    <script src="js/Chatbot.js" defer></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+    <!-- Navbar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-[#282e39]/50 backdrop-blur-md bg-[#111318]/80 animate-fadeInDown">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-2" id="logoBrand">
+                    <!-- Logo will be loaded from CONFIG -->
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="services.html">Services</a>
+                    <a class="text-white text-sm font-medium transition-colors" href="about.html">About</a>
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="contact.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden md:flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white hover:bg-primary/90 transition-colors">
+                        Get Support
+                    </button>
+                    <button class="flex md:hidden items-center justify-center text-white" aria-label="Toggle menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- About Hero -->
+        <section class="relative py-20 lg:py-32 overflow-hidden animate-fadeInDown">
+            <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                style='background-image: linear-gradient(rgba(16, 22, 34, 0.8) 0%, rgba(16, 22, 34, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWN59AYJfrh6f3onKnpcH8tp7h2uOYIc1-mdwapb0O3m7wueU65WIYpQi1XwXrZxKcXxi1ADvrS6OTDu_lxhJQyNJEcWMr2NLJf9PsGD2hhYMtATnkK_F8oneSrySBTcQWgDluIeq3SMQl4P4cBUti4ZcnpRQHTOiIp_Ugxh3VFzq3fStD2aPoEsOVPOLmoD-s-18yyq4BLSRqelykPw54XA5_8R97uQXi_zi5bbVZ4-bBo7b3XkFV9aatjZDCPC1gX1Nbb1CZROz7");'>
+            </div>
+            <div class="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <h1
+                        class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 animate-slideInLeft">
+                        We are <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">Modern IT
+                            Solutions</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed animate-slideInRight">
+                        Founded with a mission to simplify technology for enterprise. We believe in building
+                        infrastructure that is not just secure, but also scalable and efficient.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story / Values -->
+        <section class="py-20 bg-[#151a23]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+                            <span class="h-px w-8 bg-primary"></span>
+                            Our Story
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-6">More than just an IT company</h2>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                            For over five years, Nattya Shield Yazura has been providing integrated security solutions
+                            designed to protect what matters most. Our philosophy is straightforward: Security must be
+                            proactive, not reactive. Through intelligent systems and professional implementation, we
+                            help businesses operate safely, efficiently, and without disruption.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-[#1c1f27] p-6 rounded-xl border border-slate-800">
+                            <h3 class="text-4xl font-bold text-white mb-2">15+</h3>
+                            <p class="text-slate-400">Years of Excellence</p>
+                        </div>
+                        <div class="bg-[#1c1f27] p-6 rounded-xl border border-slate-800">
+                            <h3 class="text-4xl font-bold text-white mb-2">50+</h3>
+                            <p class="text-slate-400">Certified Experts</p>
+                        </div>
+                        <div class="bg-[#1c1f27] p-6 rounded-xl border border-slate-800">
+                            <h3 class="text-4xl font-bold text-white mb-2">500+</h3>
+                            <p class="text-slate-400">Happy Clients</p>
+                        </div>
+                        <div class="bg-[#1c1f27] p-6 rounded-xl border border-slate-800">
+                            <h3 class="text-4xl font-bold text-white mb-2">24/7</h3>
+                            <p class="text-slate-400">Support Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section - DISABLED -->
+        <!-- 
+        <section class="py-20 bg-background-dark">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <h2 class="text-3xl font-bold text-white mb-4">Meet Our Leadership</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">The experts behind our success.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="group bg-[#1c1f27] border border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-colors animate-fadeInUp animate-stagger-1">
+                        <div class="h-64 bg-slate-800 relative">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                                <span class="material-symbols-outlined text-6xl">person</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Alex Morgan</h3>
+                            <p class="text-primary text-sm font-medium mb-4">Chief Technology Officer</p>
+                            <p class="text-slate-400 text-sm">Expert in Cloud Architecture and Cybersecurity with over
+                                20 years of experience.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-[#1c1f27] border border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-colors animate-fadeInUp animate-stagger-2">
+                        <div class="h-64 bg-slate-800 relative">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                                <span class="material-symbols-outlined text-6xl">person_3</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Sarah Chen</h3>
+                            <p class="text-primary text-sm font-medium mb-4">Head of Operations</p>
+                            <p class="text-slate-400 text-sm">Ensures seamless service delivery and client satisfaction
+                                across all projects.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-[#1c1f27] border border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-colors animate-fadeInUp animate-stagger-3">
+                        <div class="h-64 bg-slate-800 relative">
+                            <div class="absolute inset-0 flex items-center justify-center text-slate-600">
+                                <span class="material-symbols-outlined text-6xl">person_4</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">David Miller</h3>
+                            <p class="text-primary text-sm font-medium mb-4">Lead Security Analyst</p>
+                            <p class="text-slate-400 text-sm">Certified Ethical Hacker specialized in penetration
+                                testing and risk assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Portfolio Section - DISABLED -->
+        <!--
+        <section class="py-20 bg-[#151a23]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fadeInUp">
+                    <div
+                        class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm mb-4">
+                        <span class="h-px w-8 bg-primary"></span>
+                        Our Work
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-4">Featured Projects & Case Studies</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Real-world solutions for enterprise challenges,
+                        delivered with excellence.</p>
+                </div>
+                <div id="portfolioContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Portfolio items will be loaded here -->
+        </div>
+        </div>
+        </section>
+        -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0e14] border-t border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex size-6 items-center text-white">
+                            <img src="img/Logo only.png" alt="Logo" class="w-4 h-5">
+                        </div>
+                        <h3 class="text-white text-base font-bold">Nattya Shield Yazura</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Providing top-tier IT infrastructure, security systems, and networking solutions for businesses
+                        that demand reliability.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">News & Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="services.html">CCTV Installation</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Cloud Migration</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Network Security</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                    <p class="text-slate-400 text-sm mb-4">Subscribe to get the latest security updates.</p>
+                    <form class="flex gap-2">
+                        <input
+                            class="w-full rounded-lg bg-slate-800 border-slate-700 text-white placeholder-slate-500 focus:border-primary focus:ring-primary text-sm px-3 py-2"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white rounded-lg px-3 py-2 flex items-center justify-center"
+                            type="button">
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">© 2026 Nattya Shield Yazura. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-slate-500">
+                    <a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-slate-300 transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof CONFIG !== 'undefined' && typeof DOM !== 'undefined') {
+                DOM.renderPortfolio('portfolioContainer', CONFIG.portfolio);
+            }
+        });
+    </script>
+
+    <!-- Chatbot Config -->
+    <script src="js/chatbot-config.js" defer></script>
+</body>
+
+</html>

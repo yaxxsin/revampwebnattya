@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - Modern IT Solutions</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Chatbot Script (defer untuk non-blocking load) -->
+    <script src="js/Chatbot.js" defer></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+    <!-- Navbar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-[#282e39]/50 backdrop-blur-md bg-[#111318]/80 animate-fadeInDown">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-2" id="logoBrand">
+                    <!-- Logo will be loaded from CONFIG -->
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="services.html">Services</a>
+                    <a class="text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-white text-sm font-medium transition-colors" href="contact.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden md:flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white hover:bg-primary/90 transition-colors">
+                        Get Support
+                    </button>
+                    <button class="flex md:hidden items-center justify-center text-white" aria-label="Toggle menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <section class="py-20 bg-background-dark animate-fadeInDown">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="animate-slideInLeft">
+                        <h1 class="text-4xl font-bold text-white mb-6">Get in Touch</h1>
+                        <p class="text-slate-400 text-lg mb-12">
+                            Have a question about our services or need immediate support? Our team is ready to help you
+                            24/7.
+                        </p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4 animate-fadeInUp animate-stagger-1">
+                                <div class="bg-slate-800 p-3 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-2xl">location_on</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Visit Us</h3>
+                                    <p class="text-slate-400">Nattya solution,<br>Jl. Pabuaran, Blok Jl. Telkom No.3,
+                                        RT.1/RW.4, Bojong Baru,Kabupaten Bogor, Jawa Barat 16921</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 animate-fadeInUp animate-stagger-2">
+                                <div class="bg-slate-800 p-3 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-2xl">call</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Call Us</h3>
+                                    <p class="text-slate-400">+62 819-3402-6755</p>
+                                    <p class="text-slate-500 text-sm">Mon-Fri from 8am to 5pm</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 animate-fadeInUp animate-stagger-3">
+                                <div class="bg-slate-800 p-3 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-2xl">mail</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg mb-1">Email</h3>
+                                    <p class="text-slate-400">supportnattya@gmail.com</p>
+                                    <p class="text-slate-400">marketingnattya@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-[#1c1f27] p-8 rounded-2xl border border-slate-800 shadow-xl animate-slideInRight">
+                        <h2 class="text-2xl font-bold text-white mb-6">Send us a message</h2>
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-400 mb-2">First Name <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="text" name="firstName" placeholder="John"
+                                        class="w-full bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:border-primary focus:ring-primary transition-colors px-3 py-2"
+                                        required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-400 mb-2">Last Name</label>
+                                    <input type="text" name="lastName" placeholder="Doe"
+                                        class="w-full bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:border-primary focus:ring-primary transition-colors px-3 py-2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Email Address <span
+                                        class="text-red-500">*</span></label>
+                                <input type="email" name="email" placeholder="john@example.com"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:border-primary focus:ring-primary transition-colors px-3 py-2"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Service of Interest</label>
+                                <select name="service"
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg text-white focus:border-primary focus:ring-primary transition-colors px-3 py-2">
+                                    <option>General Inquiry</option>
+                                    <option>Network Infrastructure</option>
+                                    <option>Cybersecurity Audit</option>
+                                    <option>Cloud Migration</option>
+                                    <option>CCTV Installation</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-400 mb-2">Message <span
+                                        class="text-red-500">*</span></label>
+                                <textarea name="message" rows="4" placeholder="Tell us about your needs..."
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:border-primary focus:ring-primary transition-colors px-3 py-2"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="h-96 w-full relative animate-fadeIn">
+            <div id="leafletMap" class="w-full h-full rounded-lg overflow-hidden"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0e14] border-t border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex size-6 items-center text-white">
+                            <img src="img/Logo only.png" alt="Logo" class="w-4 h-5">
+                        </div>
+                        <h3 class="text-white text-base font-bold">Nattya Shield Yazura</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Providing top-tier IT infrastructure, security systems, and networking solutions for businesses
+                        that demand reliability.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">News & Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="services.html">CCTV Installation</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Cloud Migration</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Network Security</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                    <p class="text-slate-400 text-sm mb-4">Subscribe to get the latest security updates.</p>
+                    <form class="flex gap-2">
+                        <input
+                            class="w-full rounded-lg bg-slate-800 border-slate-700 text-white placeholder-slate-500 focus:border-primary focus:ring-primary text-sm px-3 py-2"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white rounded-lg px-3 py-2 flex items-center justify-center"
+                            type="button">
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">© 2026 Nattya Shield Yazura. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-slate-500">
+                    <a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-slate-300 transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/contact-form.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Leaflet map
+            const map = L.map('leafletMap').setView([-6.46892009628054, 106.80399936863016], 15);
+
+            // Add tile layer from OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19,
+            }).addTo(map);
+
+            // Add marker at office location
+            const marker = L.marker([-6.46892009628054, 106.80399936863016]).addTo(map);
+            marker.bindPopup(`
+                <div class="text-center">
+                    <h3 class="font-bold text-slate-900">Nattya Shield Yazzura</h3>
+                    <p class="text-sm text-slate-700">Jl. Pabuaran, Blok Jl. Telkom No.3, RT.1/RW.4, Bojong Baru,Kabupaten Bogor, Jawa Barat 16921</p>
+                    <p class="text-xs text-slate-600 mt-2">📞 +6281934026755</p>
+                </div>
+            `).openPopup();
+
+            // Custom marker icon
+            marker.setIcon(L.icon({
+                iconUrl: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23135bec"><path d="M12 0C7.58 0 4 3.58 4 8c0 5 8 16 8 16s8-11 8-16c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            }));
+        });
+    </script>
+
+    <!-- Chatbot Config -->
+    <script src="js/chatbot-config.js" defer></script>
+</body>
+
+</html>
