@@ -1,0 +1,13 @@
+{
+  "name": "nattya-website",
+  "version": "1.0.0",
+  "description": "Nattya IT Solutions Website",
+  "scripts": {
+    "dev": "wrangler pages dev . --port 8788",
+    "deploy": "wrangler pages deploy . --project-name nattya-website",
+    "preview": "wrangler pages deploy . --project-name nattya-website --branch preview"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
